@@ -16,12 +16,9 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
     %
-
-
-
-
-
-
+    hypo = X * theta
+    delta=alpha* (1/m) * (X' * (hypo-y)); % X' * (h - y) = sum((h - y) .* X)'
+    theta -=delta
 
     % ============================================================
 
@@ -31,3 +28,7 @@ for iter = 1:num_iters
 end
 
 end
+A = [1 2; 3 4; 5 6];
+B = [1 2 3; 4 5 6];
+A = [1 2; 3 4; 5 6];
+B = [1 2 3; 4 5 6];
